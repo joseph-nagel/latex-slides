@@ -71,15 +71,15 @@
 \definecolor{darkergray}{RGB}{51,51,51}                             % custom gray for the text
 
 % LENGTHS
-\newlength{\subWidth}       \setlength{\subWidth}{0.5\textwidth}    % width for matrix of figures
-\newlength{\subHeight}      \setlength{\subHeight}{3.6cm}           % height for figures in a matrix
-\newlength{\figWidth}       \setlength{\figWidth}{6cm}              % width for individual figures
-\newlength{\figHeight}      \setlength{\figHeight}{3.6cm}           % height for individual figures
+%\newlength{\subWidth} \setlength{\subWidth}{0.5\textwidth}         % width for matrix of figures
+%\newlength{\subHeight} \setlength{\subHeight}{3.6cm}               % height for figures in a matrix
+%\newlength{\figWidth} \setlength{\figWidth}{6cm}                   % width for individual figures
+%\newlength{\figHeight} \setlength{\figHeight}{3.6cm}               % height for individual figures
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FORMATTING
 
 % RAGGED2E
-%\usepackage{ragged2e}                                              % provides \justifying for justifed text
+%\usepackage{ragged2e}                                              % provides \justifying for justified text
 
 % SETBEAMERCOLOR
 \setbeamercolor{structure}{fg=themegray}                            % color of the theme
@@ -97,7 +97,7 @@
 %\setbeamertemplate{bibliography item}{}                            % removes bibliography item symbols
 
 % BEAMER MACROS
-%\newcommand{\boldtheme}[1]{\textcolor{darkergray}{\textbf{{#1}}}}   % \textbf{} does not comply with the normal text scheme
+%\newcommand{\boldtheme}[1]{\textcolor{darkergray}{\textbf{{#1}}}}  % \textbf{} does not comply with the normal text scheme
 \newcommand{\sectionTOC}[1]{
 {\setbeamertemplate{footline}{}
 \begin{frame}[noframenumbering]
@@ -148,6 +148,40 @@
 % SUBSECTION TOC
 \sectionTOC{Section outline}
 
+% MOTIVATION
+\begin{frame}
+    \frametitle{Motivation}
+    \begin{tcolorbox}
+        \begin{itemize}
+            \setlength{\itemsep}{2mm}
+            \item \textbf{Observation}: This does not work!
+            \item \textbf{Question}: How can we make it work?
+        \end{itemize}
+    \end{tcolorbox}
+    \vfill
+    \begin{itemize}
+        \setlength{\itemsep}{4mm}
+        \item Item 1
+        \item Item 2
+        \item Item 3
+    \end{itemize}
+\end{frame}
+
+% SOLUTION
+\begin{frame}
+    \frametitle{Solution}
+    \begin{block}{Main idea}
+        This is the main idea
+    \end{block}
+    \vfill
+    \begin{itemize}
+        \setlength{\itemsep}{4mm}
+        \item Item 1
+        \item Item 2
+        \item Item 3
+    \end{itemize}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Section title}
 
@@ -162,13 +196,13 @@
 \section*{The end}
 
 % OUTLOOK
-\begin{frame}
-    \frametitle{Outlook}
-    \begin{itemize}
-        \setlength{\itemsep}{4mm}
-        \item Item
-    \end{itemize}
-\end{frame}
+%\begin{frame}
+%    \frametitle{Outlook}
+%    \begin{itemize}
+%        \setlength{\itemsep}{4mm}
+%        \item Item
+%    \end{itemize}
+%\end{frame}
 
 % QUESTIONS
 {\setbeamertemplate{footline}{}

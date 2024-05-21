@@ -1,0 +1,188 @@
+\documentclass[
+11pt,compress,aspectratio=141,                      % [aspectratio=54,43(default),141,32,149,1610,169]
+%hyperref={colorlinks=true,allcolors=darkgray}      % pass options to hyperref
+]{beamer}
+
+\linespread{1.1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GENERAL
+
+% THEMES
+\usetheme[height=1cm]{Rochester}                    % beamer theme
+\usecolortheme{default}                             % default colors
+\usefonttheme{professionalfonts}                    % custom font settings
+\useinnertheme{circles}                             % inner theme circles
+\useoutertheme{default}                             % outer theme default
+
+% LANGUAGE & ENCODING
+\usepackage[english]{babel}                         % language
+\usepackage[utf8]{inputenc}                         % input text encoding
+\usepackage[T1]{fontenc}                            % output encoding
+
+% FONT
+%\usepackage{lmodern}                               % Latin Modern
+\usepackage{cmbright}                               % Computer Modern Bright
+
+% AMSMATH
+\usepackage{amsmath}                                % improved mathematical typesetting
+\usepackage{amstext}                                % text in mathematics mode
+\usepackage{amsfonts}                               % extended set of fonts
+\usepackage{amssymb}                                % extended symbol collection
+\usepackage[fixamsmath]{mathtools}                  % extension to amsmath
+
+% MISCELLANEOUS
+\usepackage{bm}                                     % \bm{} for bold math (greek) symbols, alternatives: \mathbf{}, \boldsymbol{}, \pmb{}
+\usepackage{dsfont}                                 % \mathds{N}, \mathds{R}, \mathds{1}
+\usepackage{units}                                  % \unit[1]{mm}, \unit[1]{ly}
+\usepackage{nicefrac}                               % \nicefrac{nominator}{denominator}, also included in the package units
+\usepackage{nth}                                    % \nth{1}, \nth{2}
+
+% SYMBOLS
+\usepackage{textcomp}                               % \textcopyright
+
+% FIGURES, TABLES & LISTS
+\usepackage{graphicx}                               % graphics package
+%\usepackage[export]{adjustbox}                     % frame option for figures
+\usepackage{xcolor}                                 % advanced version of colors
+%\usepackage{enumitem}                              % control layouts of itemize etc.
+\usepackage{booktabs}                               % nice tables
+\usepackage{multirow}                               % cells that span multiple rows
+\usepackage{tabularx}                               % fixed tabular widths, e.g. full page width
+\usepackage{array}                                  % customizable column types
+\usepackage{calc}                                   % allows for simple calculation for lengths
+\usepackage{copyrightbox}                           % copyright note next to figure
+\usepackage{tcolorbox}                              % colored boxes
+\usepackage[font=footnotesize,skip=2pt]{caption}    % customizable captions
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SETTINGS
+
+% TITLEPAGE
+\title{Title}
+\subtitle{Subtitle}
+\author{Author}
+\institute{Affiliation}
+\date{\today}
+
+% GRAPHICS PATH
+\graphicspath{{logo/}{fig/}{res/}}
+
+% COLORS
+\definecolor{themegray}{RGB}{77,77,77}                              % custom gray for the theme
+\definecolor{darkergray}{RGB}{51,51,51}                             % custom gray for the text
+
+% LENGTHS
+\newlength{\subWidth}       \setlength{\subWidth}{0.5\textwidth}    % width for matrix of figures
+\newlength{\subHeight}      \setlength{\subHeight}{3.6cm}           % height for figures in a matrix
+\newlength{\figWidth}       \setlength{\figWidth}{6cm}              % width for individual figures
+\newlength{\figHeight}      \setlength{\figHeight}{3.6cm}           % height for individual figures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FORMATTING
+
+% RAGGED2E
+%\usepackage{ragged2e}                                              % provides \justifying for justifed text
+
+% SETBEAMERCOLOR
+\setbeamercolor{structure}{fg=themegray}                            % color of the theme
+\setbeamercolor{normal text}{fg=darkergray}                         % color of the text
+%\setbeamercolor{title page}{fg=darkgray}                           % color of titlepage
+
+% BEAMER SETTINGS
+\usepackage{appendixnumberbeamer}                                   % appendix numbering
+%\setbeamertemplate{caption}{\raggedright\insertcaption\par}        % remove ``figure''-prefix in captions
+\setbeamertemplate{footline}[frame number]                          % frame number in lower right corner
+\setbeamertemplate{navigation symbols}{}                            % turning off the navigation elements
+%\beamertemplatenavigationsymbolsempty                              % turning off the navigation elements
+\setbeamerfont{institute}{shape=\itshape}                           % affiliation in italics
+%\renewcommand\textbullet{\ensuremath{\bullet}}                     % removes warnings related to textbullet
+%\setbeamertemplate{bibliography item}{}                            % removes bibliography item symbols
+
+% BEAMER MACROS
+%\newcommand{\boldtheme}[1]{\textcolor{darkergray}{\textbf{{#1}}}}   % \textbf{} does not comply with the normal text scheme
+\newcommand{\sectionTOC}[1]{
+{\setbeamertemplate{footline}{}
+\begin{frame}[noframenumbering]
+    \frametitle{{#1}}
+    \tableofcontents[currentsection,hideothersubsections]
+\end{frame}}}
+
+% SECTION OUTLINE
+%\AtBeginSection[]
+%{
+%    {\setbeamertemplate{footline}{}
+%    \begin{frame}[noframenumbering]
+%        \frametitle{Section outline}
+%        \tableofcontents[currentsection]
+%    \end{frame}}
+%}
+
+% SUBSECTION OUTLINE
+%\AtBeginSubsection[]
+%{
+%    {\setbeamertemplate{footline}{} % \begin{frame}[noframenumbering]
+%        \frametitle{Table of Contents}
+%        \tableofcontents[currentsection,currentsubsection]
+%    \end{frame}}
+%}
+
+\begin{document}
+
+% TITLEFRAME
+{\setbeamertemplate{footline}{}
+\begin{frame}[noframenumbering]
+    %\frametitle{\(\vcenter{\hbox{\protect\includegraphics[height=0.8cm]{Logo}}}\)}
+    %\frametitle{\includegraphics[height=1cm]{Logo}}
+    \titlepage
+\end{frame}}
+
+% OVERVIEW
+{\setbeamertemplate{footline}{}
+\begin{frame}[noframenumbering]
+    \frametitle{Overview}
+    \tableofcontents[hidesubsections]
+    %\tableofcontents
+\end{frame}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Overview}
+
+% SUBSECTION TOC
+\sectionTOC{Section outline}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Section title}
+
+% SUBSECTION TOC
+\sectionTOC{Section outline}
+
+\subsection{Subsection 1}
+
+\subsection{Subsection 2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{The end}
+
+% OUTLOOK
+\begin{frame}
+    \frametitle{Outlook}
+    \begin{itemize}
+        \setlength{\itemsep}{4mm}
+        \item Item
+    \end{itemize}
+\end{frame}
+
+% QUESTIONS
+{\setbeamertemplate{footline}{}
+\begin{frame}[noframenumbering]
+    \frametitle{Questions?}
+\end{frame}}
+
+% REFERENCES
+%{\setbeamertemplate{footline}{}
+%\begin{frame}[noframenumbering]                    % [allowframebreaks] in case the bibiliography spans multiple slides
+%    \frametitle{References}
+%    %\justifying
+%    \printbibliography
+%\end{frame}}
+
+\end{document}
+

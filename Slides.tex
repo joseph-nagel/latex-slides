@@ -1,9 +1,7 @@
 \documentclass[
-11pt,compress,aspectratio=141,                      % [aspectratio=54,43(default),141,32,149,1610,169]
-%hyperref={colorlinks=true,allcolors=darkgray}      % pass options to hyperref
+    11pt,compress,aspectratio=141,                  % [aspectratio=54,43(default),141,32,149,1610,169]
+    %hyperref={colorlinks=true,allcolors=darkgray}  % pass options to hyperref
 ]{beamer}
-
-\linespread{1.1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GENERAL
 
@@ -34,7 +32,7 @@
 \usepackage{bm}                                     % \bm{} for bold math (greek) symbols, alternatives: \mathbf{}, \boldsymbol{}, \pmb{}
 \usepackage{dsfont}                                 % \mathds{N}, \mathds{R}, \mathds{1}
 \usepackage{units}                                  % \unit[1]{mm}, \unit[1]{ly}
-\usepackage{nicefrac}                               % \nicefrac{nominator}{denominator}, also included in the package units
+\usepackage{nicefrac}                               % \nicefrac{nominator}{denominator}, also included in the units package
 \usepackage{nth}                                    % \nth{1}, \nth{2}
 
 % SYMBOLS
@@ -70,6 +68,9 @@
 \definecolor{themegray}{RGB}{77,77,77}                              % custom gray for the theme
 \definecolor{darkergray}{RGB}{51,51,51}                             % custom gray for the text
 
+% LINE SPACING
+\linespread{1.1}
+
 % LENGTHS
 %\newlength{\subWidth} \setlength{\subWidth}{0.5\textwidth}         % width for matrix of figures
 %\newlength{\subHeight} \setlength{\subHeight}{3.6cm}               % height for figures in a matrix
@@ -90,11 +91,11 @@
 \usepackage{appendixnumberbeamer}                                   % appendix numbering
 %\setbeamertemplate{caption}{\raggedright\insertcaption\par}        % remove ``figure''-prefix in captions
 \setbeamertemplate{footline}[frame number]                          % frame number in lower right corner
-\setbeamertemplate{navigation symbols}{}                            % turning off the navigation elements
-%\beamertemplatenavigationsymbolsempty                              % turning off the navigation elements
+\setbeamertemplate{navigation symbols}{}                            % turn off the navigation elements
+%\beamertemplatenavigationsymbolsempty                              % turn off the navigation elements
 \setbeamerfont{institute}{shape=\itshape}                           % affiliation in italics
-%\renewcommand\textbullet{\ensuremath{\bullet}}                     % removes warnings related to textbullet
-%\setbeamertemplate{bibliography item}{}                            % removes bibliography item symbols
+%\renewcommand\textbullet{\ensuremath{\bullet}}                     % remove warnings related to textbullet
+%\setbeamertemplate{bibliography item}{}                            % remove bibliography item symbols
 
 % BEAMER MACROS
 %\newcommand{\boldtheme}[1]{\textcolor{darkergray}{\textbf{{#1}}}}  % \textbf{} does not comply with the normal text scheme

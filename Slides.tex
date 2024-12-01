@@ -37,6 +37,7 @@
 
 % SYMBOLS
 \usepackage{textcomp}                               % \textcopyright
+%\usepackage{emoji}                                  % \emoji{}, requires lualatex
 
 % FIGURES, TABLES & LISTS
 \usepackage{graphicx}                               % graphics package
@@ -189,6 +190,36 @@
 
 \subsection{Subsection 1}
 
+% TABLES
+\begin{frame}
+    \frametitle{Tables}
+    \begin{table}[h]
+        \centering
+        \caption*{A table}
+        \begin{tabular}{lll}
+            \toprule
+            & Col.\ 1 & Col.\ 2 \\
+            \midrule
+            Row 1 & a & c \\
+            Row 2 & b & d \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+    \vfill
+    \begin{table}[h]
+        \centering
+        \caption*{Another table}
+        \begin{tabular}{lllll}
+            \toprule
+            & Col.\ 1 & Col.\ 2 & Col.\ 3 & Col.\ 4 \\
+            \midrule
+            Row 1 & $0.0$ & $2.0$ & $4.0$ & $6.0$ \\
+            Row 2 & $1.0$ & $3.0$ & $5.0$ & $7.0$ \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+\end{frame}
+
 \subsection{Subsection 2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,6 +238,10 @@
 {\setbeamertemplate{footline}{}
 \begin{frame}[noframenumbering]
     \frametitle{Questions?}
+%    \begin{center}
+%        \Huge
+%        \emoji{thinking-face} \emoji{nerd-face} \emoji{exploding-head} \emoji{alien-monster}
+%    \end{center}
 \end{frame}}
 
 % REFERENCES
